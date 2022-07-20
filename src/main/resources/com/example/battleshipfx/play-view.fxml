@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane fx:id="anchorPanePlay" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.battleshipfx.controller.PlayController">
+
+    <ImageView
+            fitWidth="940"
+            fitHeight="660">
+        <image>
+            <Image url="@../../../img/background.png"/>
+        </image>
+    </ImageView>
+
+    <ImageView
+            layoutX="20"
+            layoutY="130"
+            fitWidth="440"
+            fitHeight="440">
+        <image>
+            <Image url="@../../../img/oceangrid_final.png"/>
+        </image>
+    </ImageView>
+
+    <ImageView
+            layoutX="480"
+            layoutY="130"
+            fitWidth="440"
+            fitHeight="440">
+        <image>
+            <Image url="@../../../img/radargrid_final.png"/>
+        </image>
+    </ImageView>
+
+    <VBox
+            fx:id="vBoxP"
+            alignment="CENTER"
+            spacing="2"
+            style="-fx-padding: 10;
+                   -fx-border-style: solid inside;
+                   -fx-background-color: aqua;
+                   -fx-border: 2;
+                   -fx-border-insets: 5;
+                   -fx-border-radius: 5;-fx-border-color: blue;"
+            layoutX="20"
+            layoutY="20"
+            prefHeight="60"
+            prefWidth="440">
+        <Text fx:id="headerTextP" textAlignment="CENTER" style=" -fx-font-smoothing-type: lcd;
+                                             -fx-font-weight: bold;
+                                             -fx-fill: white;
+                                             -fx-font-size: 20pt;">
+            Player's Map
+        </Text>
+
+
+        <Text fx:id="numberRemainingP" textAlignment="CENTER" style=" -fx-font-smoothing-type: lcd;
+                                             -fx-fill: white;
+                                             -fx-font-size: 16pt;">
+            Number of ships remaining: 5
+        </Text>
+    </VBox>
+
+    <VBox
+            fx:id="vBoxA"
+            alignment="CENTER"
+            spacing="2"
+            style="-fx-padding: 10;
+                   -fx-border-style: solid inside;
+                   -fx-background-color:aqua;
+                   -fx-border: 2;
+                   -fx-border-insets: 5;
+                   -fx-border-radius: 5;-fx-border-color: blue;"
+            layoutX="480"
+            layoutY="20"
+            prefHeight="60"
+            prefWidth="440">
+        <Text fx:id="headerTextA" textAlignment="CENTER" style=" -fx-font-smoothing-type: lcd;
+                                             -fx-font-weight: bold;
+                                             -fx-fill: white;
+                                             -fx-font-size: 20pt;">
+            AI's Map
+        </Text>
+
+        <Text fx:id="numberRemainingA" textAlignment="CENTER" style=" -fx-font-smoothing-type: lcd;
+                                             -fx-fill: white;
+                                             -fx-font-size: 16pt;">
+            Number of ships remaining: 5
+        </Text>
+    </VBox>
+
+    <Button fx:id="btnPlay" text="PLAY" onAction="#playGame" layoutX="410" layoutY="580" prefHeight="40" prefWidth="120"  style="-fx-padding: 10;
+                                                                           -fx-border-style: solid inside;
+                                                                           -fx-background-color: linear-gradient(#42eb7d, #38fad7);
+                                                                           -fx-border: 8;
+                                                                           -fx-border-insets: 5;
+                                                                           -fx-border-radius: 5;
+                                                                           -fx-font-weight: bold;
+                                                                           -fx-font-size: 20px;
+                                                                           -fx-border-color: black;"/>
+    <ImageView
+            fx:id="turnoff_on"
+            onMouseClicked="#turnoff_on"
+            layoutY="580"
+            layoutX="540"
+            fitWidth="60"
+            fitHeight="60">
+        <image>
+            <Image url="@unmute.jpg"/>
+        </image>
+    </ImageView>
+
+</AnchorPane>

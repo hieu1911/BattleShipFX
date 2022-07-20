@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:id="anchorPaneMenu"
+            fx:controller="com.example.battleshipfx.controller.MenuController">
+
+    <ImageView fitHeight="660" fitWidth="940">
+        <image>
+            <Image url="@../../../img/background_menu.jpg"/>
+        </image>
+    </ImageView>
+
+    <VBox    xmlns="http://javafx.com/javafx"
+             prefWidth="940"
+             prefHeight="660"
+             spacing="30"
+             alignment="CENTER">
+
+
+
+        <Text
+                style=" -fx-font-smoothing-type: lcd;
+                        -fx-fill: white;
+                        -fx-stroke: aqua;
+                        -fx-stroke-width: 2;
+                        -fx-font-weight: bold;
+                        -fx-font-size: 80pt;"
+        >
+            Battle Ship
+        </Text>
+
+        <HBox alignment="CENTER" spacing="40">
+
+            <Button fx:id="btnPlay"
+                    onMouseEntered="#setMouseEnteredPlay"
+                    onMouseExited="#setMouseExitedPlay"
+                    onAction="#playGame"
+                    style= "-fx-background-color: linear-gradient(#4ea3fd, #00e2fa);
+                        -fx-background-radius: 80;
+                        -fx-background-insets: 0,1,2,3,0;
+                        -fx-font-weight: bold;
+                        -fx-font-size: 36px;
+                        -fx-padding: 10 10 10 10;"
+                    prefWidth="170"
+                    textFill="white"
+                    text="PLAY"/>
+
+            <Button
+                    onMouseEntered="#setMouseEnteredExit"
+                    onMouseExited="#setMouseExitedExit"
+                    onAction="#exitGame"
+                    fx:id="btnExit" style= "-fx-background-color: linear-gradient(#fb739a, #ffe140);
+                        -fx-background-radius: 80;
+                        -fx-background-insets: 0,1,2,3,0;
+                        -fx-font-weight: bold;
+                        -fx-font-size: 36px;
+                        -fx-padding: 10 10 10 10;"
+                    prefWidth="170"
+                    textFill="white"
+                    text="EXIT"/>
+
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>
